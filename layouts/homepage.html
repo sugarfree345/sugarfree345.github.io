@@ -1,0 +1,12 @@
+{{- define "main" }}
+<div class="home-layout">
+  {{- partial "home_sidebar.html" . }}
+  <article class="home-main">
+    <div class="post-content md-content">
+      {{- if not (.Param "disableAnchoredHeadings") }}
+      {{- partial "anchored_headings.html" .Content -}}
+      {{- else }}{{ .Content }}{{ end }}
+    </div>
+  </article>
+</div>
+{{- end }}

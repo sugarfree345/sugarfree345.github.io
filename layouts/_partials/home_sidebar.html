@@ -1,0 +1,21 @@
+{{- $sidebar := .Params.sidebar | default dict -}}
+<aside class="home-sidebar">
+  <div class="home-sidebar-inner">
+    {{- with $sidebar.avatar }}
+    <img class="home-avatar" src="{{ . | relURL }}" alt="{{ $sidebar.name | default $.Title }}" width="120" height="120" />
+    {{- end }}
+    <h1 class="home-name">{{ $sidebar.name | default .Title }}</h1>
+    {{- with $sidebar.tagline }}
+    <p class="home-tagline">{{ . }}</p>
+    {{- end }}
+    {{- with $sidebar.nav }}
+    <nav class="home-nav" aria-label="页面目录">
+      <ul>
+        {{- range . }}
+        <li><a href="{{ .anchor }}">{{ .title }}</a></li>
+        {{- end }}
+      </ul>
+    </nav>
+    {{- end }}
+  </div>
+</aside>

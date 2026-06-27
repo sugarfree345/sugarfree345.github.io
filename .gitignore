@@ -1,0 +1,33 @@
+# Hugo build output
+/public/
+/resources/_gen/
+
+# Hugo lock file
+.hugo_build.lock
+
+# Hugo binaries (if downloaded locally)
+hugo.exe
+hugo.darwin
+hugo.linux
+
+# Hugo Pipes / JS tooling
+assets/jsconfig.json
+hugo_stats.json
+
+# OS files
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Editor / IDE
+.idea/
+*.swp
+*.swo
+*~
+
+# Dependencies (if added later)
+node_modules/
+
+# Secrets / local env
+.env
+.env.*
